@@ -1,3 +1,1 @@
-# 요구사항은 https://www.acmicpc.net/problem/1018을 확인하세요
-def min_count_of_squares(board: list[list[str]]) -> int:
-    pass
+def min_count_of_squares(a: list[list[str]]) -> int:return min([sum([(k+l+(a[k][l]=='W'))%2 for k in range(i,i+8) for l in range(j,j+8)]) for i in range(len(a)-7) for j in range(len(a[0])-7)]+[sum([(k+l+(a[k][l]=='B'))%2 for k in range(i,i+8) for l in range(j,j+8)]) for i in range(len(a)-7) for j in range(len(a[0])-7)])
